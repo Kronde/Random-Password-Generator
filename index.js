@@ -16,10 +16,10 @@ function generate() {
     
     if (passwordLength > max) {
         passwordLength = max;
-        inputNumber.value = max; // Mettre à jour la valeur affichée dans l'input
+        inputNumber.value = max;
     } else if (passwordLength < min) {
         passwordLength = min;
-        inputNumber.value = min; // Mettre à jour la valeur affichée dans l'input
+        inputNumber.value = min;
     }
     
     passwordGenerated = "";
