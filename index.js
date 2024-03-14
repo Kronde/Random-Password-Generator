@@ -7,10 +7,20 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M",
 
 let passwordGenerated = ""
 let passwordText = document.getElementById("passwordGenerated")
+let min = 4;
+let max = 38;
 
 function generate()
 {
     let passwordLength = document.getElementById("inputNumber").value
+    
+    if (passwordLength > max){
+        passwordLength = max)
+    }
+    else if (passwordLength < min){
+        passwordLength = min
+    }
+    
     passwordGenerated = ""
     characters.sort(()=>Math.random()-0.5)
     passwordText.textContent = "hello"
