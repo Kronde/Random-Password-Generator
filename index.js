@@ -10,23 +10,23 @@ let passwordText = document.getElementById("passwordGenerated")
 let min = 4;
 let max = 38;
 
-function generate()
-{
-    let passwordLength = document.getElementById("inputNumber").value
+function generate() {
+    let inputNumber = document.getElementById("inputNumber");
+    let passwordLength = inputNumber.value;
     
-    if (passwordLength > max){
-        passwordLength = max)
-    }
-    else if (passwordLength < min){
-        passwordLength = min
+    if (passwordLength > max) {
+        passwordLength = max;
+        inputNumber.value = max; // Mettre à jour la valeur affichée dans l'input
+    } else if (passwordLength < min) {
+        passwordLength = min;
+        inputNumber.value = min; // Mettre à jour la valeur affichée dans l'input
     }
     
-    passwordGenerated = ""
-    characters.sort(()=>Math.random()-0.5)
-    passwordText.textContent = "hello"
-    for (let i=0;i<passwordLength;i++)
-    {
-        passwordGenerated += characters[i]
+    passwordGenerated = "";
+    characters.sort(()=>Math.random()-0.5);
+    passwordText.textContent = "hello";
+    for (let i = 0; i < passwordLength; i++) {
+        passwordGenerated += characters[i];
     }
 
     passwordText.textContent = passwordGenerated;
